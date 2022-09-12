@@ -1,0 +1,21 @@
+name: 'gsheets-append-action'
+description: 'GitHub action to append data to a google sheet.'
+inputs:
+  GOOGLE_USER_MAIL:
+    description: 'The user ID to authenticate the service account user.'
+    required: true
+  GOOGLE_USER_KEY:
+    description: 'The users private key to authenticate the service account user.'
+    required: true
+  SPREADSHEET:
+    description: 'The spreadsheet ID to append the data to.'
+    required: true
+  DATA_ENV_NAME:
+    description: 'The environment variable containing the data to upload in CSV format.'
+    required: true
+  TABLE_START_CELL:
+    description: 'The cell that defines the "table anchor" in the format `sheetName!A1`.'
+    default: A1
+runs:
+  using: 'node16'
+  main: 'index.js'

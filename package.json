@@ -1,0 +1,26 @@
+{
+  "name": "@mudlet/gsheets-append-action",
+  "version": "1.0.0",
+  "description": "GitHub action to append data to a google sheet.",
+  "main": "index.js",
+  "dependencies": {
+    "@actions/core": "^1.9.1",
+    "dotenv": "^16.0.2",
+    "google-auth-library": "^8.5.1",
+    "googleapis": "^107.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mudlet/gsheets-append-action.git"
+  },
+  "author": "Florian Scheel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mudlet/gsheets-append-action/issues"
+  },
+  "homepage": "https://github.com/Mudlet/gsheets-append-action#readme",
+  "type": "module"
+}
