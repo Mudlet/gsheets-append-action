@@ -10,6 +10,7 @@
     "googleapis": "^107.0.0"
   },
   "scripts": {
+    "prepare": "ncc build index.js -o dist --source-map --license licenses.txt",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,5 +23,8 @@
     "url": "https://github.com/Mudlet/gsheets-append-action/issues"
   },
   "homepage": "https://github.com/Mudlet/gsheets-append-action#readme",
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "@vercel/ncc": "^0.34.0"
+  }
 }
