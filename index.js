@@ -32,6 +32,7 @@ await sheets.spreadsheets.values.append({
   spreadsheetId: spreadsheetId,
   range: tableStartCell,
   valueInputOption: "RAW",
+  insertDataOption: "INSERT_ROWS",
   requestBody: {
     majorDimension: "ROWS",
     range: tableStartCell,
