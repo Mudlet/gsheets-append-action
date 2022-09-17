@@ -31,7 +31,7 @@ await sheets.spreadsheets.values.append({
   auth: googleAuth,
   spreadsheetId: spreadsheetId,
   range: tableStartCell,
-  valueInputOption: "RAW",
+  valueInputOption: "USER_ENTERED",
   insertDataOption: "INSERT_ROWS",
   requestBody: {
     majorDimension: "ROWS",
