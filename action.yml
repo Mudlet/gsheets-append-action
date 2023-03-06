@@ -16,6 +16,9 @@ inputs:
   TABLE_START_CELL:
     description: 'The cell that defines the "table anchor" in the format `sheetName!A1`.'
     default: A1
+  UPDATE:
+    description: 'Update or append data.'
+    default: false
 runs:
   using: 'node16'
   main: 'dist/index.js'
