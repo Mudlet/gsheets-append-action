@@ -26,17 +26,35 @@ const data = process.env[dataEnvironmentVariableName]
   .split("\n")
   .map((dataRow) => dataRow.split(","));
 
-info("Uploading data...");
-await sheets.spreadsheets.values.append({
-  auth: googleAuth,
-  spreadsheetId: spreadsheetId,
-  range: tableStartCell,
-  valueInputOption: "USER_ENTERED",
-  insertDataOption: "INSERT_ROWS",
-  requestBody: {
-    majorDimension: "ROWS",
+const update = getInput("UPDATE") || "false";
+
+if (update.toLowerCase() === "true") {
+  info("Updating data...");
+  await sheets.spreadsheets.values.update({
+    auth: googleAuth,
+    spreadsheetId: spreadsheetId,
     range: tableStartCell,
-    values: data,
-  },
-});
+    valueInputOption: "USER_ENTERED",
+    requestBody: {
+      majorDimension: "ROWS",
+      range: tableStartCell,
+      values: data,
+    },
+  });
+} else {
+  info("Appending data...");
+  await sheets.spreadsheets.values.append({
+    auth: googleAuth,
+    spreadsheetId: spreadsheetId,
+    range: tableStartCell,
+    valueInputOption: "USER_ENTERED",
+    insertDataOption: "INSERT_ROWS",
+    requestBody: {
+      majorDimension: "ROWS",
+      range: tableStartCell,
+      values: data,
+    },
+  });
+}
+
 info("Done.");
