@@ -20,3 +20,7 @@ BLABLABLABLABLA
 And use that as your `GOOGLE_USER_KEY` input.
 
 ([credit]([url](https://github.com/dibenlloch/google-sheets-secrets-action)))
+
+## For action authors
+
+After editing the action, run `npm ci` to regenerate `dist/` and put edits into effect.
