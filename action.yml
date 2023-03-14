@@ -10,9 +10,10 @@ inputs:
   SPREADSHEET:
     description: 'The spreadsheet ID to append the data to.'
     required: true
+  DATA_FILE_PATH:
+    description: 'The csv file containing the data to upload. Use either this or DATA_ENV_NAME.'
   DATA_ENV_NAME:
-    description: 'The environment variable containing the data to upload in CSV format.'
-    required: true
+    description: 'The environment variable containing the data to upload in CSV format. Use either this or DATA_FILE_PATH.'
   TABLE_START_CELL:
     description: 'The cell that defines the "table anchor" in the format `sheetName!A1`.'
     default: A1
