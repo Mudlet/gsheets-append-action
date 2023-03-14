@@ -28,8 +28,8 @@ if(!dataEnvironmentVariableName && ! dataFileName){
 
 let rawData;
 
-if(dataEnvironmentVariableName){
-  rawData = readFileSync(dataEnvironmentVariableName, { encoding: 'utf-8'})
+if(dataFileName){
+  rawData = readFileSync(dataFileName, { encoding: 'utf-8'})
 } else {
   rawData = process.env[dataEnvironmentVariableName]
 }
