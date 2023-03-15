@@ -11,9 +11,9 @@ inputs:
     description: 'The spreadsheet ID to append the data to.'
     required: true
   DATA_FILE_PATH:
-    description: 'The csv file containing the data to upload. Use either this or DATA_ENV_NAME.'
+    description: 'The csv file containing the data to upload. Use either this or DATA_ENV_NAME. NOTE: If DATA_FILE_PATH is configured, DATA_ENV_NAME will be ignored.'
   DATA_ENV_NAME:
-    description: 'The environment variable containing the data to upload in CSV format. Use either this or DATA_FILE_PATH.'
+    description: 'The environment variable containing the data to upload in CSV format. Use either this or DATA_FILE_PATH. NOTE: If DATA_FILE_PATH is configured, DATA_ENV_NAME will be ignored.'
   TABLE_START_CELL:
     description: 'The cell that defines the "table anchor" in the format `sheetName!A1`.'
     default: A1
