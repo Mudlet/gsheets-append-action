@@ -22,14 +22,14 @@ const tableStartCell = getInput("TABLE_START_CELL") || "A1";
 const dataEnvironmentVariableName = getInput("DATA_ENV_NAME");
 const dataFileName = getInput('DATA_FILE_PATH');
 
-if(!dataEnvironmentVariableName && ! dataFileName){
+if (!dataEnvironmentVariableName && !dataFileName) {
   throw new Error("Either 'DATA_ENV_NAME' or 'DATA_FILE_PATH' are required.")
 }
 
 let rawData;
 
-if(dataFileName){
-  rawData = readFileSync(dataFileName, { encoding: 'utf-8'})
+if (dataFileName) {
+  rawData = readFileSync(dataFileName, { encoding: 'utf-8' })
 } else {
   rawData = process.env[dataEnvironmentVariableName]
 }
