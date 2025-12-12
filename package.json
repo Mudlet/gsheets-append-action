@@ -4,7 +4,7 @@
   "description": "GitHub action to append data to a google sheet.",
   "main": "index.js",
   "dependencies": {
-    "@actions/core": "^1.11.1",
+    "@actions/core": "^2.0.1",
     "dotenv": "^17.2.3",
     "google-auth-library": "^10.5.0",
     "googleapis": "^167.0.0"
