@@ -7,7 +7,7 @@
     "@actions/core": "^3.0.0",
     "dotenv": "^17.2.4",
     "google-auth-library": "^10.5.0",
-    "googleapis": "^171.2.0"
+    "googleapis": "^171.4.0"
   },
   "scripts": {
     "prepare": "ncc build index.js -o dist --source-map --license licenses.txt",
