@@ -21,5 +21,5 @@ inputs:
     description: 'Update or append data.'
     default: 'false'
 runs:
-  using: 'node16'
+  using: 'node24'
   main: 'dist/index.js'
